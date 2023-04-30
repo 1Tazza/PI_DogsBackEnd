@@ -1,32 +1,8 @@
 
 const axios = require("axios");
 const {Temperament, Dog, Op} = require("../../db")
-const cloudinary = require('cloudinary').v2;
-
-
-// Configuration 
-cloudinary.config({
-  cloud_name: "dapq4icmj",
-  api_key: "182849148671358",
-  api_secret: "LiNdU8c3mGXxCnRed_xiA9xQtLk"
-});
 
   
-  
-/* var ps5Games = await new Promise((resolve, reject) => {
-  cloudinary.api.resources(optionsPs5, (error, result) => {
-  if (error) {
-    reject(error);
-  } else {
-    resolve(result.resources);
-  }});
-});
-
-var gamesApi = await Promise.all([ps3Games, ps4Games, ps5Games]) */
-
-/* const optionsPs3 = { type: 'upload',  prefix: 'PS3/', max_results: 500 };
-const optionsPs5 = { type: 'upload',  prefix: 'PS5/', max_results: 500}; */
-
 const getApi = async() => {
     try{
 
@@ -200,25 +176,6 @@ const getTemperaments = async() => {
 }
 
 
-const getVideogames = async() => {
-        
-    var json = [{
-        id: 1,
-        name: "A Way Out",
-        description: "Este título de acción y aventura se enfoca en la cooperación, con una trama centrada en las hazañas de dos prisioneros en fuga, Leo y Vincent, obligados a trabajar juntos para evitar a la policía y otros criminales. Para lograrlo deberán superar persecuciones en coche, pasajes sigilosos y combates cuerpo a cuerpo",
-
-        img: ["https://res.cloudinary.com/dapq4icmj/image/upload/v1679333052/Ps4/Mafia%20Trilogy%20-%20ps4/Mafia-Trilogy-330x404_djrdru.jpg","https://res.cloudinary.com/dapq4icmj/image/upload/v1679333052/Ps4/Mafia%20Trilogy%20-%20ps4/Mafia-Trilogy-330x404_djrdru.jpg","https://res.cloudinary.com/dapq4icmj/image/upload/v1679333052/Ps4/Mafia%20Trilogy%20-%20ps4/Mafia-Trilogy-330x404_djrdru.jpg"],
-        price: 10680,
-        genre: 1,
-    },{
-        id: 2,
-        name: "A Way Out",
-        description: "En esta apasionante secuela, los jugadores serán parte de la exitosa historia de animé junto a Eren y sus compañeros, quienes luchan para salvar a la humanidad de la amenaza de los mortales titanes. Esta edición contiene las historias de las temporadas 1 a 3 del animé y más de 40 personajes jugables.",
-        price: 2,
-        genre: 2,
-    }]
-
-}
 
 module.exports = {
     getApi,
