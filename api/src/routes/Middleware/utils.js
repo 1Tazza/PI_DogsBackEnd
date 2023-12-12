@@ -7,7 +7,7 @@ const getApi = async() => {
     try{
 
     var recurso = await axios.get("https://api.thedogapi.com/v1/breeds")
-    .then(recurso => {console.log(recurso.data)
+    .then(recurso => {
     return recurso.data})
     .then(array => {
         return array.map( el => {
