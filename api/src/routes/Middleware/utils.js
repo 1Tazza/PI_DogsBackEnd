@@ -7,12 +7,13 @@ const getApi = async() => {
     try{
 
     var recurso = await axios.get("https://api.thedogapi.com/v1/breeds")
-    .then(recurso => recurso.data)
+    .then(recurso => {console.log(recurso.data)
+    return recurso.data})
     .then(array => {
         return array.map( el => {
             return {
                 id: el.id,
-                img: el.image.url,
+                img: `https://cdn2.thedogapi.com/images/${el.reference_image_id}.jpg`,
                 name: el.name,
                 temperament: el.temperament,
                 weight: el.weight.metric
